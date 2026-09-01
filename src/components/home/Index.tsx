@@ -28,8 +28,8 @@ export function Index() {
                 <span
                   className={
                     active === i
-                      ? "font-display text-2xl uppercase tracking-[-0.04em]"
-                      : "text-sm text-muted"
+                      ? "font-display text-2xl uppercase tracking-[-0.04em] md:text-3xl"
+                      : "text-sm text-muted transition-colors hover:text-ink md:text-base"
                   }
                 >
                   {item.q}

@@ -55,7 +55,7 @@ export function ProductsReel() {
           <h2 className="mt-3 max-w-3xl font-display text-4xl uppercase tracking-tighter md:text-6xl">
             The reliability stack, productized.
           </h2>
-          <p className="mt-4 max-w-xl text-sm leading-7 text-muted">
+          <p className="mt-4 max-w-xl text-sm leading-7 text-muted md:max-w-2xl md:text-base md:leading-8">
             The tools we use inside engagements, on their way to becoming products. Unnamed on
             purpose — we ship names when we ship software. Services above are live today.
           </p>

@@ -30,7 +30,7 @@ export function Desk() {
           <h2 className="mt-6 display-xl text-[15vw] md:text-[7vw]">
             Free pain-point <span className="italic-accent lowercase">analysis.</span>
           </h2>
-          <p className="mt-6 max-w-md text-sm leading-7 text-muted">
+          <p className="mt-6 max-w-md text-sm leading-7 text-muted md:max-w-lg md:text-base md:leading-8">
             A 30-minute call about your revenue stack — where the forecasting, scoring, or
             reporting AI actually stalls, and what it would take to trust it. If an audit
             isn&apos;t the right fit, we&apos;ll tell you that directly. No deck, no pitch, no
@@ -68,7 +68,7 @@ export function Desk() {
           <h3 className="mt-6 font-display text-3xl uppercase tracking-tighter md:text-5xl">
             Bring us a client.
           </h3>
-          <p className="mt-4 max-w-md text-sm leading-7 text-muted">
+          <p className="mt-4 max-w-md text-sm leading-7 text-muted md:text-base md:leading-8">
             If you sit close to mid-market revenue teams — as a consultant, agency, or fractional
             operator — and can open doors, we share the upside. One click and a short note; it
             lands straight in our inbox.

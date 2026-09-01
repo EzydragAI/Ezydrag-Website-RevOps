@@ -89,7 +89,7 @@ export function Method() {
           >
             01
           </span>
-          <div ref={items} className="relative max-w-xl">
+          <div ref={items} className="relative max-w-xl lg:max-w-2xl">
             {processSteps.map((step) => (
               <article
                 key={step.number}
@@ -102,10 +102,12 @@ export function Method() {
                 <p className="font-display text-[11px] uppercase tracking-[0.22em] text-muted">
                   {step.number}
                 </p>
-                <h3 className="mt-2 font-display text-4xl uppercase tracking-[-0.04em] md:text-6xl">
+                <h3 className="mt-2 font-display text-4xl uppercase tracking-[-0.04em] md:text-6xl lg:text-7xl">
                   {step.title}
                 </h3>
-                <p className="mt-3 max-w-md text-sm leading-7 text-muted">{step.body}</p>
+                <p className="mt-4 max-w-md text-sm leading-7 text-muted md:max-w-lg md:text-lg md:leading-8">
+                  {step.body}
+                </p>
               </article>
             ))}
           </div>

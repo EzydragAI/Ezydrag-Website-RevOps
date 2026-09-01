@@ -50,8 +50,12 @@ export function Proof() {
             <p data-proof className="display-xl text-[18vw] md:text-[8vw]">
               {item.value}
             </p>
-            <p className="mt-3 font-display text-sm uppercase tracking-[0.16em]">{item.label}</p>
-            <p className="mt-2 text-sm leading-6 text-white/55">{item.detail}</p>
+            <p className="mt-3 font-display text-sm uppercase tracking-[0.16em] md:text-base">
+              {item.label}
+            </p>
+            <p className="mt-2 text-sm leading-6 text-white/55 md:text-base md:leading-7">
+              {item.detail}
+            </p>
           </article>
         ))}
       </div>

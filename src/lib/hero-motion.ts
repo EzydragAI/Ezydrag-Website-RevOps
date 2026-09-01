@@ -1,6 +1,8 @@
 export const HERO_CLIP = {
-  desktop: "inset(44% 10% 44% 10%)",
-  mobile: "inset(40% 6% 40% 6%)",
+  // Window must be tall enough to contain the stacked headline at load;
+  // the headline is ~24vh on desktop, ~20vh on mobile.
+  desktop: "inset(32% 10% 32% 10%)",
+  mobile: "inset(38% 6% 38% 6%)",
   open: "inset(0% 0% 0% 0%)",
 } as const;
 

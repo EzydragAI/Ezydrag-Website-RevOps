@@ -161,7 +161,7 @@ export function Hero() {
         {/* Descriptor above the letterbox window: the first thing a visitor reads. */}
         <div
           ref={intro}
-          className="pointer-events-none absolute inset-x-0 bottom-[63%] z-10 flex flex-col items-center gap-4 px-5 text-center opacity-0"
+          className="pointer-events-none absolute inset-x-0 bottom-[64.5%] z-10 flex flex-col items-center gap-3 px-5 text-center opacity-0 md:gap-4 lg:bottom-[70.5%]"
         >
           <p className="font-display text-[11px] uppercase tracking-[0.3em] text-muted">
             AI production readiness for revenue operations

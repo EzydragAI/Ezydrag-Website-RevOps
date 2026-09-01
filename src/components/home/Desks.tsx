@@ -58,7 +58,7 @@ export function Desks() {
         <h2 className="mt-3 max-w-3xl font-display text-4xl uppercase tracking-tighter md:text-6xl">
           Built for the revenue team in the middle.
         </h2>
-        <p className="mt-5 max-w-xl text-sm leading-7 text-white/60">
+        <p className="mt-5 max-w-xl text-sm leading-7 text-white/60 md:max-w-2xl md:text-base md:leading-8">
           Too complex for a two-person automation shop. Too specific for a Big&nbsp;4 framework.
           Mature enough to have already tried AI — and honest enough to admit it isn&apos;t trusted
           yet.
@@ -72,7 +72,9 @@ export function Desks() {
               <h3 className="mt-2 font-display text-3xl uppercase tracking-[-0.04em]">
                 {item.title}
               </h3>
-              <p className="mt-3 max-w-md text-sm leading-7 text-white/60">{item.body}</p>
+              <p className="mt-3 max-w-md text-sm leading-7 text-white/60 md:text-base md:leading-8">
+                {item.body}
+              </p>
             </article>
           ))}
         </div>

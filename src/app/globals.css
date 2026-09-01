@@ -136,6 +136,7 @@ img {
 .marquee-track {
   animation: marquee 28s linear infinite;
   width: max-content;
+  will-change: transform;
 }
 
 @keyframes marquee {
@@ -205,15 +206,19 @@ img {
   border-color: var(--ink);
 }
 
+[data-hero-frame] {
+  will-change: clip-path;
+}
+
 @media (max-width: 1023px) {
   [data-hero-frame] {
-    clip-path: inset(40% 6% 40% 6%);
+    clip-path: inset(38% 6% 38% 6%);
   }
 }
 
 @media (min-width: 1024px) {
   [data-hero-frame] {
-    clip-path: inset(44% 10% 44% 10%);
+    clip-path: inset(32% 10% 32% 10%);
   }
 }
 

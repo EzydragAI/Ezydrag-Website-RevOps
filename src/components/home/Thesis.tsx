@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import { gsap } from "@/lib/gsap";
@@ -10,6 +10,7 @@ import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 export function Thesis() {
   const root = useRef<HTMLElement>(null);
   const copy = useRef<HTMLParagraphElement>(null);
+  const [active, setActive] = useState<number | null>(null);
   const reduced = usePrefersReducedMotion();
 
   useGSAP(
@@ -42,17 +43,46 @@ export function Thesis() {
       <h2 className="sr-only">
         Why RevOps AI stalls before production — and what reliability engineering fixes
       </h2>
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,0.28fr)_minmax(0,1fr)] lg:gap-12">
+      <div className="grid gap-8 lg:grid-cols-[minmax(0,0.32fr)_minmax(0,1fr)] lg:gap-12">
         <div>
           <p className="font-display text-[11px] uppercase tracking-[0.28em] text-muted">
-            01 — Thesis
+            {manifesto.eyebrow}
           </p>
-          <ul className="mt-6 space-y-3 text-sm text-muted">
-            {manifesto.marquee.map((item) => (
-              <li key={item} className="border-t border-line pt-3">
-                {item}
-              </li>
-            ))}
+          <ul className="mt-6">
+            {manifesto.pillars.map((item, i) => {
+              const open = active === i;
+              return (
+                <li key={item.label} className="border-t border-line last:border-b">
+                  <button
+                    type="button"
+                    onClick={() => setActive(open ? null : i)}
+                    aria-expanded={open}
+                    className="group flex w-full items-center justify-between gap-4 py-3.5 text-left"
+                  >
+                    <span
+                      className={
+                        open
+                          ? "text-sm text-ink md:text-base"
+                          : "text-sm text-muted transition-colors group-hover:text-ink md:text-base"
+                      }
+                    >
+                      {item.label}
+                    </span>
+                    <span className="font-display text-lg leading-none text-muted transition-colors group-hover:text-ink">
+                      {open ? "–" : "+"}
+                    </span>
+                  </button>
+                  <div
+                    className="grid transition-[grid-template-rows] duration-500 ease-ember"
+                    style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
+                  >
+                    <div className="overflow-hidden">
+                      <p className="pb-4 pr-6 text-sm leading-6 text-muted">{item.note}</p>
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <p

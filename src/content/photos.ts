@@ -20,35 +20,27 @@ export const photos = {
     alt: "Operations room with reliability dashboards on screens",
   },
   reach: {
-    src: "/images/ezy-reach.png",
+    src: "/images/ezy-reach.webp",
     alt: "Agent activity trail on a sunlit studio desk",
   },
   funnel: {
-    src: "/images/ezy-funnel.png",
+    src: "/images/ezy-funnel.webp",
     alt: "Team reviewing a scored pipeline",
   },
   attrib: {
-    src: "/images/ezy-attrib.png",
+    src: "/images/ezy-attrib.webp",
     alt: "Analyst reviewing forecast accuracy on a dark monitor",
   },
   lifecycle: {
-    src: "/images/ezy-lifecycle.png",
+    src: "/images/ezy-lifecycle.webp",
     alt: "Report QA sequence mapped on a studio monitor",
   },
-  creative: {
-    src: "/images/ezy-creative.png",
-    alt: "Printed evaluation reports arranged on a studio table",
-  },
-  inbox: {
-    src: "/images/ezy-inbox.png",
-    alt: "Reviewer desk with laptop and CRM screen",
-  },
   audience: {
-    src: "/images/ezy-audience.png",
+    src: "/images/ezy-audience.webp",
     alt: "Data quality clusters on a large studio display",
   },
   launch: {
-    src: "/images/ezy-launch.png",
+    src: "/images/ezy-launch.webp",
     alt: "Governance review room with timelines on dual monitors",
   },
 } as const;

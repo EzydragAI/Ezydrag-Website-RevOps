@@ -113,6 +113,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${oswald.variable} ${geist.variable} ${newsreader.variable} h-full antialiased`}
     >
       <head>
+        <link rel="preconnect" href="https://images.unsplash.com" />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className="min-h-full bg-bg font-body text-ink">

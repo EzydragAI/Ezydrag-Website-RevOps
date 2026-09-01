@@ -42,7 +42,7 @@ export function Practices() {
       <h2 className="mt-3 max-w-3xl font-display text-4xl uppercase tracking-tighter md:text-6xl">
         We&apos;re not another RevOps agency selling a CRM cleanup.
       </h2>
-      <p className="mt-5 max-w-xl text-sm leading-7 text-muted">
+      <p className="mt-5 max-w-xl text-sm leading-7 text-muted md:max-w-2xl md:text-base md:leading-8">
         Plenty of good firms do org alignment and data hygiene. We specialize in the unglamorous,
         high-value work they don&apos;t: making the AI already inside your revenue stack reliable,
         evaluated, and governed — so revenue goes up and the operating cost of running RevOps goes
@@ -75,7 +75,7 @@ export function Practices() {
                   style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
                 >
                   <div className="overflow-hidden">
-                    <p className="max-w-xl pt-4 text-sm leading-7 text-muted">
+                    <p className="max-w-xl pt-4 text-sm leading-7 text-muted md:text-base md:leading-8">
                       {service.description}
                     </p>
                   </div>
