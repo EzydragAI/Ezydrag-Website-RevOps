@@ -36,15 +36,12 @@ export function Footer() {
           <Link href="/privacy" className="hover:text-ink">
             Privacy
           </Link>
-          <Link href="/#index" className="hover:text-ink">
-            FAQ
-          </Link>
           <button
             type="button"
             className="hover:text-ink"
-            onClick={() => navigateToHash("desk", pathname, (to) => router.push(to))}
+            onClick={() => navigateToHash("index", pathname, (to) => router.push(to))}
           >
-            Book the desk
+            FAQ
           </button>
         </div>
       </div>

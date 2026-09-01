@@ -84,7 +84,7 @@ export function Header() {
               lightType ? "text-white" : "text-ink",
             )}
           >
-            Book the desk
+            Book a call
           </button>
           <button
             type="button"

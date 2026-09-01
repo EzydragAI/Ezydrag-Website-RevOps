@@ -18,12 +18,10 @@ export type Service = {
 
 export type Product = {
   id: string;
-  name: string;
-  tagline: string;
+  title: string;
+  focus: string;
   description: string;
-  price: string;
   status: "coming-soon";
   image: string;
   imageAlt: string;
-  href: string;
 };

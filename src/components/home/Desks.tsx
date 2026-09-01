@@ -53,7 +53,15 @@ export function Desks() {
       </div>
       <div className="px-5 md:px-10 lg:px-16">
         <p className="font-display text-[11px] uppercase tracking-[0.28em] text-white/45">
-          04 — Desks we sit beside
+          04 — Who we serve
+        </p>
+        <h2 className="mt-3 max-w-3xl font-display text-4xl uppercase tracking-tighter md:text-6xl">
+          Built for the revenue team in the middle.
+        </h2>
+        <p className="mt-5 max-w-xl text-sm leading-7 text-white/60">
+          Too complex for a two-person automation shop. Too specific for a Big&nbsp;4 framework.
+          Mature enough to have already tried AI — and honest enough to admit it isn&apos;t trusted
+          yet.
         </p>
         <div className="mt-12 grid gap-x-16 gap-y-10 md:grid-cols-2">
           {audiences.map((item, i) => (

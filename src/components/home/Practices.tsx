@@ -37,7 +37,15 @@ export function Practices() {
   return (
     <section ref={root} id="practices" className="px-5 py-24 md:px-10 md:py-32 lg:px-16">
       <p className="font-display text-[11px] uppercase tracking-[0.28em] text-muted">
-        03 — Practices
+        03 — Services
+      </p>
+      <h2 className="mt-3 max-w-3xl font-display text-4xl uppercase tracking-tighter md:text-6xl">
+        We&apos;re not another RevOps agency selling a CRM cleanup.
+      </h2>
+      <p className="mt-5 max-w-xl text-sm leading-7 text-muted">
+        Plenty of good firms do org alignment and data hygiene. We specialize in the unglamorous,
+        high-value work they don&apos;t: making the AI already inside your revenue stack reliable,
+        evaluated, and governed enough to trust.
       </p>
       <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
         <div>

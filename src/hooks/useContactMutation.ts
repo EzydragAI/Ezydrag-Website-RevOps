@@ -1,11 +1,11 @@
 "use client";
 
 import { useMutation } from "@tanstack/react-query";
-import type { ContactInput } from "@/lib/validations/contact";
+import type { PartnerInput } from "@/lib/validations/contact";
 
-type ContactResponse = { ok: true } | { ok: false; error: string };
+type PartnerResponse = { ok: true } | { ok: false; error: string };
 
-async function submitContact(payload: ContactInput): Promise<ContactResponse> {
+async function submitPartnerRequest(payload: PartnerInput): Promise<PartnerResponse> {
   const res = await fetch("/api/contact", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -21,6 +21,6 @@ async function submitContact(payload: ContactInput): Promise<ContactResponse> {
   return { ok: true };
 }
 
-export function useContactMutation() {
-  return useMutation({ mutationFn: submitContact });
+export function usePartnerMutation() {
+  return useMutation({ mutationFn: submitPartnerRequest });
 }

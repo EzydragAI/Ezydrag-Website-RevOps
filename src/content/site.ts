@@ -1,9 +1,9 @@
 export const site = {
   name: "Ezydrag",
   legalName: "Ezydrag®",
-  tagline: "Compound demand. Automate the desk.",
+  tagline: "RevOps AI that survives production.",
   description:
-    "Ezydrag builds, deploys, and manages AI agents that run marketing operations — campaigns, lead routing, content systems, and attribution — so growth teams spend less time in the stack and more time on the story.",
+    "Ezydrag takes RevOps AI — forecasting, lead scoring, AI-generated reporting, agent workflows — from unreliable pilot to governed, monitored production that revenue leaders can actually run the business on. Priced on the outcome, not the hours.",
   url: "https://ezydrag.in",
   email: "hello@ezydrag.in",
   region: "India → Worldwide",

@@ -6,7 +6,7 @@ import { heroWindowClip } from "@/lib/hero-motion";
 import { useUIStore } from "@/stores/ui-store";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
-const verbs = ["Reach", "Routing", "Attrib", "Lifecycle", "Desk"] as const;
+const verbs = ["Audit", "Evals", "Monitor", "Govern", "Sustain"] as const;
 
 export function Preloader() {
   const root = useRef<HTMLDivElement>(null);
@@ -108,7 +108,7 @@ export function Preloader() {
       <div ref={chrome} className="relative z-10 flex h-full flex-col justify-between">
         <div className="flex items-start justify-between font-display text-[11px] uppercase tracking-[0.28em] text-white/50">
           <span>Ezydrag</span>
-          <span>Arming the desk</span>
+          <span>Running preflight</span>
         </div>
         <div className="flex flex-col items-center justify-center">
           <p
@@ -122,7 +122,7 @@ export function Preloader() {
           </p>
         </div>
         <div className="flex items-end justify-between font-display text-[11px] uppercase tracking-[0.22em] text-white/40">
-          <span>Marketing automation</span>
+          <span>RevOps AI reliability</span>
           <span>India → Worldwide</span>
         </div>
       </div>

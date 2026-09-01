@@ -3,43 +3,43 @@ import { photos } from "@/content/photos";
 
 export const services: Service[] = [
   {
-    id: "campaigns",
+    id: "audit",
     number: "01",
-    title: "Campaign Operations",
-    summary: "Brief to live, without the twelve-tab scramble.",
+    title: "Production Readiness Audit",
+    summary: "Find out, in writing, why the AI isn't trusted yet.",
     description:
-      "We map how a campaign actually ships — assets, audiences, approvals, UTM, QA — and put an agent on the stalls. Humans keep the brief and the brand call. The rest stops dying in Slack threads.",
+      "A 2–3 week fixed-scope review of your existing RevOps AI — architecture, data pipeline, evaluation coverage, governance, and cost at scale. Every initiative gets screened for regulatory exposure. You leave with a prioritized, risk-sequenced roadmap that's yours to keep, whether or not you engage us further.",
     image: photos.campaign.src,
     imageAlt: photos.campaign.alt,
   },
   {
-    id: "routing",
+    id: "pilot-to-production",
     number: "02",
-    title: "Lead & Lifecycle Agents",
-    summary: "Every inbound has a next step, not a shared inbox.",
+    title: "Pilot-to-Production",
+    summary: "We harden the initiative you already have until it earns trust.",
     description:
-      "Agents score, route, and nudge against your real rules — territory, product, SLA — then escalate when a human should take the call. No generic chatbot on the pricing page pretending to be a closer.",
+      "Built in-house, by a freelancer, or by another agency — we take the pilot and rebuild what's needed: data readiness for messy production inputs, automated evaluation that catches failures before your customers do, human-in-the-loop design for high-stakes calls, and monitoring that flags drift in minutes. Priced against a defined ROI case, not billed by the hour.",
     image: photos.routing.src,
     imageAlt: photos.routing.alt,
   },
   {
-    id: "content",
+    id: "retainer",
     number: "03",
-    title: "Content Systems",
-    summary: "Variants, localization, and channel cuts from one source.",
+    title: "Reliability & Governance Retainer",
+    summary: "The team that keeps watching after everyone else moves on.",
     description:
-      "We build agents that turn an approved master into the cuts each channel needs — subject lines, ad copy, landing blocks — with a trail back to the brief. Editors stay on voice. The factory stops being a weekend job.",
-    image: photos.content.src,
-    imageAlt: photos.content.alt,
-  },
-  {
-    id: "deploy",
-    number: "04",
-    title: "Managed Growth Ops",
-    summary: "From pilot to always-on, with someone on the hook.",
-    description:
-      "We host, watch, and retune. Change windows that respect launch days. When the funnel shifts, the agent shifts — without a six-month agency retainer that only produces decks.",
+      "AI systems don't stay reliable on their own — models update, data shifts, usage grows. We run continuous monitoring and evaluation of your production AI, respond when something breaks, and deliver a quarterly reliability and regulatory-exposure report your leadership and compliance teams can actually use.",
     image: photos.deploy.src,
     imageAlt: photos.deploy.alt,
+  },
+  {
+    id: "governance",
+    number: "04",
+    title: "Governance by Design",
+    summary: "The regulatory screen almost nobody runs at design time.",
+    description:
+      "Every initiative that touches hiring, pay, performance, or financial approval gets a design-stage exposure check — including EU AI Act high-risk categories and the transparency rules already in force. If a regulator or auditor will one day ask who approved this, we make sure the answer exists before you build, not after.",
+    image: photos.content.src,
+    imageAlt: photos.content.alt,
   },
 ];

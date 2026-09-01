@@ -28,17 +28,20 @@ const newsreader = Newsreader({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.legalName} — Marketing AI Automation`,
+    default: `${site.legalName} — AI Production Readiness for RevOps`,
     template: `%s · ${site.name}`,
   },
   description: site.description,
   applicationName: site.legalName,
   keywords: [
-    "marketing AI",
-    "marketing automation",
-    "campaign operations",
-    "lead routing",
-    "attribution agents",
+    "RevOps AI",
+    "AI production readiness",
+    "AI governance",
+    "revenue operations",
+    "forecasting reliability",
+    "lead scoring evaluation",
+    "AI reliability retainer",
+    "EU AI Act compliance",
     "Ezydrag",
   ],
   authors: [{ name: site.name, url: site.url }],
@@ -47,20 +50,20 @@ export const metadata: Metadata = {
     locale: site.locale,
     url: site.url,
     siteName: site.legalName,
-    title: `${site.legalName} — Marketing AI Automation`,
+    title: `${site.legalName} — AI Production Readiness for RevOps`,
     description: site.description,
     images: [
       {
         url: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80",
         width: 1600,
         height: 900,
-        alt: "Marketing studio floor",
+        alt: "Revenue team working through a pipeline review",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.legalName} — Marketing AI Automation`,
+    title: `${site.legalName} — AI Production Readiness for RevOps`,
     description: site.description,
     images: [
       "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=80",
@@ -81,13 +84,19 @@ export const viewport: Viewport = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "ProfessionalService",
   name: site.legalName,
   url: site.url,
   email: site.email,
   description: site.description,
   areaServed: "Worldwide",
   slogan: site.tagline,
+  knowsAbout: [
+    "Revenue operations",
+    "AI production readiness",
+    "AI governance",
+    "AI evaluation and monitoring",
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

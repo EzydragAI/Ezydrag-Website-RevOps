@@ -166,15 +166,15 @@ export function Hero() {
             <div className="relative flex flex-col items-center justify-center">
               <h1
                 ref={left}
-                className="display-xl whitespace-nowrap text-[16vw] md:text-[9vw]"
+                className="display-xl whitespace-nowrap text-[18vw] md:text-[10vw]"
               >
-                Compound
+                Survive
               </h1>
               <p
                 ref={right}
-                className="italic-accent mt-[-0.28em] whitespace-nowrap text-[14vw] leading-none text-white/90 md:text-[7vw]"
+                className="italic-accent mt-[-0.28em] whitespace-nowrap text-[13vw] leading-none text-white/90 md:text-[6.5vw]"
               >
-                demand.
+                production.
               </p>
             </div>
           </div>
@@ -184,8 +184,9 @@ export function Hero() {
           ref={meta}
           className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex items-end justify-between px-5 pb-8 font-display text-[11px] uppercase tracking-[0.22em] text-white/70 opacity-0 md:px-10 lg:px-16"
         >
-          <p className="max-w-56 normal-case tracking-normal text-white/80">
-            AI desks that run campaigns, routing, and attribution — so growth teams write the story.
+          <p className="max-w-64 normal-case tracking-normal text-white/80">
+            AI production readiness for RevOps — forecasting, scoring, reporting, and agents your
+            revenue team can actually trust.
           </p>
           <p className="hidden md:block">Scroll to open</p>
           <p>

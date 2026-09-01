@@ -8,12 +8,10 @@ export function ThemeProvider() {
   const setColorMode = useUIStore((s) => s.setColorMode);
 
   useEffect(() => {
+    // Light is the default; dark applies only when explicitly chosen before.
     let mode: ColorMode = "light";
     try {
-      const stored = localStorage.getItem(THEME_KEY);
-      if (stored === "light" || stored === "dark") {
-        mode = stored;
-      } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      if (localStorage.getItem(THEME_KEY) === "dark") {
         mode = "dark";
       }
     } catch {

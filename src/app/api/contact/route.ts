@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { contactSchema } from "@/lib/validations/contact";
+import { partnerSchema } from "@/lib/validations/contact";
 import { site } from "@/content/site";
 
 export async function POST(request: Request) {
@@ -11,13 +11,13 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid JSON body." }, { status: 400 });
   }
 
-  const parsed = contactSchema.safeParse(body);
+  const parsed = partnerSchema.safeParse(body);
   if (!parsed.success) {
     const message = parsed.error.issues[0]?.message ?? "Please check the form.";
     return NextResponse.json({ error: message }, { status: 400 });
   }
 
-  const { name, email, issue, company } = parsed.data;
+  const { name, email, message, company } = parsed.data;
   if (company) {
     return NextResponse.json({ ok: true });
   }
@@ -36,8 +36,8 @@ export async function POST(request: Request) {
         from,
         to: [site.email],
         reply_to: email,
-        subject: `Marketing briefing from ${name}`,
-        text: `Name: ${name}\nEmail: ${email}\n\n${issue}`,
+        subject: `Channel partner request from ${name}`,
+        text: `Channel partner request\n\nName: ${name}\nEmail: ${email}\n\n${message}`,
       }),
     });
 
@@ -48,7 +48,7 @@ export async function POST(request: Request) {
       );
     }
   } else {
-    console.info("[contact]", { name, email, issue });
+    console.info("[partner-request]", { name, email, message });
   }
 
   return NextResponse.json({ ok: true });

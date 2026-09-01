@@ -10,7 +10,7 @@ export function Index() {
   return (
     <section id="index" className="px-5 py-24 md:px-10 md:py-32 lg:px-16">
       <p className="font-display text-[11px] uppercase tracking-[0.28em] text-muted">
-        07 — Index
+        07 — Straight answers
       </p>
       <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
         <ol>

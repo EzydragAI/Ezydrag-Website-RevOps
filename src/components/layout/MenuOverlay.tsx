@@ -12,10 +12,10 @@ import { cn } from "@/lib/cn";
 
 const indexCopy = [
   { hint: "The argument" },
-  { hint: "How we work" },
-  { hint: "What we run" },
-  { hint: "The three desks" },
-  { hint: "Write the brief" },
+  { hint: "How we engage" },
+  { hint: "What we harden" },
+  { hint: "Coming soon" },
+  { hint: "Free analysis" },
 ] as const;
 
 export function MenuOverlay() {

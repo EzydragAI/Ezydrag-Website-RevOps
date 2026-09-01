@@ -1,17 +1,17 @@
 export const manifesto = {
   eyebrow: "01 — Thesis",
-  body: "Every campaign already has a quieter version. We design AI agents that take the operational load off growth teams — so people write the story, not chase the stack.",
+  body: "Your forecast, scoring, and pipeline reports already run on AI. Almost nobody trusts them enough to run the business on. We close that gap — evaluation, monitoring, governance — until the AI inside your revenue stack is something your CRO can defend.",
   stats: [
-    { label: "What we own", value: "The loop after the brief" },
-    { label: "What we do not", value: "Another dashboard you ignore" },
-    { label: "Where we sit", value: "Beside CRM, ads, and inbox" },
+    { label: "What we own", value: "The gap between pilot and production" },
+    { label: "What we do not", value: "CRM migrations and chatbot demos" },
+    { label: "Where we sit", value: "Beside your CRM, warehouse, and agents" },
   ],
   marquee: [
-    "Campaign ops",
-    "Lead routing",
-    "Lifecycle",
-    "Creative systems",
-    "Attribution",
-    "RevOps",
+    "Forecasting",
+    "Lead scoring",
+    "AI agents",
+    "Reporting",
+    "Evals",
+    "Governance",
   ],
 } as const;

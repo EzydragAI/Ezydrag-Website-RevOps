@@ -39,8 +39,11 @@ export function Proof() {
       className="bg-teal-deep px-5 py-28 text-[#fff8ed] md:px-10 md:py-36 lg:px-16"
     >
       <p className="font-display text-[11px] uppercase tracking-[0.28em] text-white/45">
-        06 — Proof, not theatre
+        06 — The gap, in numbers
       </p>
+      <h2 className="mt-3 max-w-3xl font-display text-4xl uppercase tracking-tighter md:text-6xl">
+        You&apos;re not behind. You&apos;re in good company — and that&apos;s the problem.
+      </h2>
       <div className="mt-16 grid gap-12 md:grid-cols-2 xl:grid-cols-4">
         {outcomes.map((item) => (
           <article key={item.label} className="border-t border-white/15 pt-6">

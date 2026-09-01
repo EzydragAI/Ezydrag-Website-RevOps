@@ -50,11 +50,15 @@ export function ProductsReel() {
       <div className={desktop && !reduced ? "flex h-svh flex-col" : ""}>
         <div className="px-5 pb-6 pt-20 md:px-10 md:pt-24 lg:px-16">
           <p className="font-display text-[11px] uppercase tracking-[0.28em] text-muted">
-            05 — Products
+            05 — Products · Coming soon
           </p>
           <h2 className="mt-3 max-w-3xl font-display text-4xl uppercase tracking-tighter md:text-6xl">
-            Eight desks. One operator.
+            The reliability stack, productized.
           </h2>
+          <p className="mt-4 max-w-xl text-sm leading-7 text-muted">
+            The tools we use inside engagements, on their way to becoming products. Unnamed on
+            purpose — we ship names when we ship software. Services above are live today.
+          </p>
         </div>
         <div
           ref={viewport}
@@ -89,14 +93,16 @@ export function ProductsReel() {
                   sizes="(min-width: 1024px) 38vw, 100vw"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/15 to-transparent" />
+                <div className="absolute right-4 top-4 border border-white/40 px-3 py-1.5 font-display text-[10px] uppercase tracking-[0.22em] text-white/90 backdrop-blur-sm">
+                  Coming soon
+                </div>
                 <div className="absolute inset-x-0 bottom-0 p-5 text-white md:p-6">
                   <p className="font-display text-[11px] uppercase tracking-[0.2em] text-white/60">
-                    {product.status === "coming-soon" ? "Coming soon" : product.price}
+                    {product.focus}
                   </p>
                   <h3 className="mt-2 font-display text-3xl uppercase tracking-[-0.04em] md:text-4xl">
-                    {product.name}
+                    {product.title}
                   </h3>
-                  <p className="mt-1 text-sm text-white/70">{product.tagline}</p>
                   <p className="mt-3 max-w-sm text-sm leading-6 text-white/70">
                     {product.description}
                   </p>
