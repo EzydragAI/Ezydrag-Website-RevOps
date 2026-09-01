@@ -17,7 +17,9 @@ export function Footer() {
         <div className="space-y-4">
           <Logo />
           <p className="max-w-sm text-sm leading-6 text-muted">
-            {site.tagline}. {site.region}.
+            Ezydrag is the AI production readiness partner for Revenue Operations: we make
+            forecasting, lead scoring, reporting, and agent AI reliable, governed, and worth
+            trusting — so revenue grows and RevOps costs less to run. {site.region}.
           </p>
           <a
             href={`mailto:${site.email}`}

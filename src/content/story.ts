@@ -70,9 +70,9 @@ export const outcomes = [
     detail: "RAND, MIT, and IDC converge on the same range. The model is rarely the problem — the system around it is.",
   },
   {
-    value: "0",
-    label: "Junior handoffs",
-    detail: "You work directly with the senior practitioners who do the work. That's a guarantee, not a claim.",
+    value: "3–5×",
+    label: "Typical infra cost overrun",
+    detail: "The most-cited reason pilots die. Cost-at-scale projection is part of every audit we run.",
   },
 ] as const;
 

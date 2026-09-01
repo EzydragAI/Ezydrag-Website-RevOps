@@ -45,7 +45,8 @@ export function Practices() {
       <p className="mt-5 max-w-xl text-sm leading-7 text-muted">
         Plenty of good firms do org alignment and data hygiene. We specialize in the unglamorous,
         high-value work they don&apos;t: making the AI already inside your revenue stack reliable,
-        evaluated, and governed enough to trust.
+        evaluated, and governed — so revenue goes up and the operating cost of running RevOps goes
+        down.
       </p>
       <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
         <div>

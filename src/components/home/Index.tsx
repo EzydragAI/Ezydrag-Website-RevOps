@@ -12,6 +12,7 @@ export function Index() {
       <p className="font-display text-[11px] uppercase tracking-[0.28em] text-muted">
         07 — Straight answers
       </p>
+      <h2 className="sr-only">Frequently asked questions about RevOps AI production readiness</h2>
       <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
         <ol>
           {faqs.map((item, i) => (

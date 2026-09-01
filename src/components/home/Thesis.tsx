@@ -39,6 +39,9 @@ export function Thesis() {
 
   return (
     <section ref={root} id="thesis" className="px-5 py-16 md:px-10 md:py-20 lg:px-16">
+      <h2 className="sr-only">
+        Why RevOps AI stalls before production — and what reliability engineering fixes
+      </h2>
       <div className="grid gap-8 lg:grid-cols-[minmax(0,0.28fr)_minmax(0,1fr)] lg:gap-12">
         <div>
           <p className="font-display text-[11px] uppercase tracking-[0.28em] text-muted">

@@ -19,8 +19,9 @@ export function Hero() {
   const frame = useRef<HTMLDivElement>(null);
   const media = useRef<HTMLDivElement>(null);
   const copy = useRef<HTMLDivElement>(null);
-  const left = useRef<HTMLHeadingElement>(null);
-  const right = useRef<HTMLParagraphElement>(null);
+  const intro = useRef<HTMLDivElement>(null);
+  const left = useRef<HTMLSpanElement>(null);
+  const right = useRef<HTMLSpanElement>(null);
   const meta = useRef<HTMLDivElement>(null);
   const pct = useRef<HTMLSpanElement>(null);
   const handoff = useUIStore((s) => s.loaderHandoff);
@@ -32,6 +33,7 @@ export function Hero() {
       gsap.set(frame.current, { clipPath: heroWindowClip() });
       gsap.set(media.current, { scale: 1.28 });
       gsap.set(copy.current, { opacity: 0 });
+      gsap.set(intro.current, { opacity: 0 });
       gsap.set(meta.current, { opacity: 0 });
       gsap.set([left.current, right.current], { x: 0, y: 0 });
     },
@@ -41,9 +43,10 @@ export function Hero() {
   useGSAP(
     () => {
       if (!handoff || !copy.current) return;
-      const intro = gsap.timeline({ defaults: { ease: "ember" } });
-      intro
+      const introTl = gsap.timeline({ defaults: { ease: "ember" } });
+      introTl
         .to(copy.current, { opacity: 1, duration: 0.8 }, 0)
+        .to(intro.current, { opacity: 1, duration: 0.7 }, 0.15)
         .to(meta.current, { opacity: 1, duration: 0.5 }, 0.28);
     },
     { scope: root, dependencies: [handoff] },
@@ -60,6 +63,8 @@ export function Hero() {
         gsap.set(frame.current, { clipPath: HERO_CLIP.open });
         gsap.set(media.current, { scale: 1 });
         gsap.set([copy.current, meta.current], { opacity: 1 });
+        // Dark descriptor text would sit on the photo when the clip is open.
+        gsap.set(intro.current, { autoAlpha: 0 });
       });
 
       mm.add(
@@ -85,6 +90,12 @@ export function Hero() {
               0,
             )
             .fromTo(media.current, { scale: 1.28 }, { scale: 1, ease: "none" }, 0)
+            .fromTo(
+              intro.current,
+              { opacity: 1 },
+              { opacity: 0, duration: 0.22, ease: "none", immediateRender: false },
+              0,
+            )
             .fromTo(
               left.current,
               { x: 0 },
@@ -129,7 +140,13 @@ export function Hero() {
               { clipPath: HERO_CLIP.open, ease: "none" },
               0,
             )
-            .fromTo(media.current, { scale: 1.2 }, { scale: 1, ease: "none" }, 0);
+            .fromTo(media.current, { scale: 1.2 }, { scale: 1, ease: "none" }, 0)
+            .fromTo(
+              intro.current,
+              { opacity: 1 },
+              { opacity: 0, duration: 0.22, ease: "none", immediateRender: false },
+              0,
+            );
         },
       );
 
@@ -139,13 +156,22 @@ export function Hero() {
   );
 
   return (
-    <section
-      ref={root}
-      id="hero"
-      data-inverse-header
-      className="relative h-[240vh] bg-teal-deep"
-    >
+    <section ref={root} id="hero" className="relative h-[240vh] bg-bg">
       <div className="sticky top-0 h-svh overflow-hidden">
+        {/* Descriptor above the letterbox window: the first thing a visitor reads. */}
+        <div
+          ref={intro}
+          className="pointer-events-none absolute inset-x-0 bottom-[63%] z-10 flex flex-col items-center gap-4 px-5 text-center opacity-0"
+        >
+          <p className="font-display text-[11px] uppercase tracking-[0.3em] text-muted">
+            AI production readiness for revenue operations
+          </p>
+          <p className="max-w-2xl text-base leading-7 text-ink md:text-lg md:leading-8">
+            We make the AI inside your revenue stack reliable enough to run the business on — and
+            cheap enough to keep running.
+          </p>
+        </div>
+
         <div ref={frame} data-hero-frame className="absolute inset-0">
           <div ref={media} className="absolute inset-0 origin-center">
             <Image
@@ -163,35 +189,41 @@ export function Hero() {
             ref={copy}
             className="absolute inset-0 z-10 flex items-center justify-center px-5 opacity-0"
           >
-            <div className="relative flex flex-col items-center justify-center">
-              <h1
+            <h1 className="relative flex flex-col items-center justify-center text-white">
+              <span
                 ref={left}
-                className="display-xl whitespace-nowrap text-[18vw] md:text-[10vw]"
+                className="display-xl whitespace-nowrap text-[15vw] md:text-[8.5vw]"
               >
-                Survive
-              </h1>
-              <p
+                Revenue up.
+              </span>
+              <span
                 ref={right}
-                className="italic-accent mt-[-0.28em] whitespace-nowrap text-[13vw] leading-none text-white/90 md:text-[6.5vw]"
+                className="italic-accent mt-[-0.24em] whitespace-nowrap text-[12vw] leading-none text-white/90 md:text-[6vw]"
               >
-                production.
-              </p>
-            </div>
+                ops cost down.
+              </span>
+              <span className="sr-only">
+                Ezydrag is the AI production readiness and governance partner for Revenue
+                Operations teams. We turn forecasting, lead scoring, reporting, and AI agent
+                workflows into reliable, governed production systems that grow revenue and reduce
+                the cost of running revenue operations.
+              </span>
+            </h1>
           </div>
         </div>
 
         <div
           ref={meta}
-          className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex items-end justify-between px-5 pb-8 font-display text-[11px] uppercase tracking-[0.22em] text-white/70 opacity-0 md:px-10 lg:px-16"
+          className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex items-end justify-between px-5 pb-8 font-display text-[11px] uppercase tracking-[0.22em] text-[#fff8ed] opacity-0 mix-blend-difference md:px-10 lg:px-16"
         >
-          <p className="max-w-64 normal-case tracking-normal text-white/80">
-            AI production readiness for RevOps — forecasting, scoring, reporting, and agents your
-            revenue team can actually trust.
+          <p className="max-w-64 normal-case tracking-normal opacity-90">
+            Forecasting, lead scoring, reporting, and AI agents — hardened, monitored, and governed
+            in production.
           </p>
-          <p className="hidden md:block">Scroll to open</p>
+          <p className="hidden opacity-80 md:block">Scroll to open</p>
           <p>
             <span ref={pct}>00</span>
-            <span className="text-white/40"> / 100</span>
+            <span className="opacity-40"> / 100</span>
           </p>
         </div>
       </div>
